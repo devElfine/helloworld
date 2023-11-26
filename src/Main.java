@@ -105,7 +105,25 @@ public class Main {
         System.out.println("Спортсмен похудеет на 7 кг. по 250 гр. в день за " + daysLiteBy250gr + " дней,");
         System.out.println("\t либо за " + daysLiteBy500gr + " дней, если будет худеть по 500 гр. в день.\n");
 
+        // task 8
+        System.out.println("\nTask 8 result:");
+        int maryIncoming = 67760;
+        int denisIncoming = 83690;
+        int kristineIncoming = 76230;
 
+        int maryIncomingIndex = maryIncoming + (maryIncoming / 10);
+        int maryIncomingIndexByYear = (maryIncomingIndex - maryIncoming) * 12;
+        int denisIncomingIndex = denisIncoming + (denisIncoming / 10);
+        int denisIncomingIndexByYear = (denisIncomingIndex - denisIncoming) * 12;
+        int kristineIncomingIndex = kristineIncoming + (kristineIncoming / 10);
+        int kristineIncomingIndexByYear = (kristineIncomingIndex - kristineIncoming) * 12;
+
+        System.out.println("Маша теперь полуяает " + maryIncomingIndex + " рублей,");
+        System.out.println("\tгодовой доход вырос на " + maryIncomingIndexByYear + " рублей;");
+        System.out.println("Денис теперь полуяает " + denisIncomingIndex + " рублей,");
+        System.out.println("\tгодовой доход вырос на " + denisIncomingIndexByYear + " рублей;");
+        System.out.println("Кристина теперь полуяает " + kristineIncomingIndex + " рублей,");
+        System.out.println("\tгодовой доход вырос на " + kristineIncomingIndexByYear + " рублей.");
 
     }
 }
