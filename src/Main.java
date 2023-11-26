@@ -1,4 +1,4 @@
-import static java.lang.Math.abs;
+//import static java.lang.Math.abs;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -14,106 +14,99 @@ public class Main {
             // Press Shift+F9 to start debugging your code. We have set one breakpoint
             // for you, but you can always add more by pressing Ctrl+F8.
             System.out.println("i = " + i);*/
-        System.out.println("--hw2--");
+        System.out.println("--hw3--");
+
         // task 1
-        var dog = 8.0; var cat = 3.6;
-        var paper = 763789;
-        System.out.println("");
-        System.out.println("Task 1 result:");
-        System.out.println("Variables are printing out here:");
-        System.out.println("    var dog is " + dog + ";");
-        System.out.println("    var cat is " + cat + ";");
-        System.out.println("    finally, var paper is " + paper + ".");
+        System.out.println("\nTask 1 result:");
+
+        byte    aV = 127;
+        short   bV = 32767;
+        int     cV = 2147483647;
+        long    dV = 9223372036854775807L;
+        float   eV = 3.4E+38f;
+        double  fV = 1.7E+308;
+
+        System.out.println("Value of aV:byte is " + aV + ";");
+        System.out.println("  ... of bV:short is " + bV + ";");
+        System.out.println("  ... of cV:int is " + cV + ";");
+        System.out.println("  ... of dV:long is " + dV + ";");
+        System.out.println("  ... of eV:float is " + eV + ";");
+        System.out.println("and finally, value of fV:double is " + fV + ".\n");
 
         // task 2
-        var inc = 4;
-        dog = dog + inc;
-        cat = cat + inc;
-        paper = paper + inc;
-
-        System.out.println("");
-        System.out.println("Task 2 result:");
-        System.out.println("Variables is changed, added " + inc + ", and printing out here:");
-        System.out.println("    var dog is " + dog + ";");
-        System.out.println("    var cat is " + cat + ";");
-        System.out.println("    finally, var paper is " + paper + ".");
+        System.out.println("\nTask 2 result:");
+        float weightCoin = 27.12f;
+        long starsGalactic = 987678965549L;
+        double pencilWeight = 2.786;
+        int staffCount = 569;
+        int lakeDepth = -159;
+        short brickBuildingCount = 27897;
+        byte dogsCount = 67;
+        System.out.println("(defined variables)\n");
 
         // task 3
-        dog = dog - 3.5;
-        cat = cat - 1.6;
-        paper = paper - 7639;
-        System.out.println("");
-        System.out.println("Task 3 result:");
-        System.out.println("Variables is changed again, custom decrement, and printing out here:");
-        System.out.println("    var dog is " + dog + ";");
-        System.out.println("    var cat is " + cat + ";");
-        System.out.println("    finally, var paper is " + paper + ".");
+        System.out.println("\nTask 3 result:");
+        byte ludPavl_count = 23;
+        byte annSerg_count = 27;
+        byte kateAndr_count = 30;
+        int purchasedSheets_amount = 480;
+        int byChildrenInHands = purchasedSheets_amount / (ludPavl_count + annSerg_count + kateAndr_count);
+        System.out.println("Every children will received by " + byChildrenInHands + " sheets.\n");
 
         // task 4
-        var friend = 19;
-        var ff = friend + 2;
-        System.out.println("");
-        System.out.println("Task 4 result:");
-        System.out.println("    var friend is " + friend + ";");
-        System.out.println(ff + ";");
-        System.out.println(ff / 7 + ".");
+        System.out.println("\nTask 4 result:");
+        byte machinePerf = 16; // per 2 min.
+        int inDAYminuteCount = 24 * 60;
+        int machinePerfByMinute = machinePerf / 2;
+        int inTwentlyMinPerf = 20 * machinePerfByMinute;
+        int inDAYperf = inDAYminuteCount * machinePerfByMinute;
+        int inThreeDaysPerf = inDAYminuteCount * 3 * machinePerfByMinute;
+        int inMonthPerf = 31 * inDAYminuteCount * machinePerfByMinute;
+        System.out.println("За 20 минут машина произвела " + inTwentlyMinPerf  + " штук бутылок;");
+        System.out.println(".. сутки машина произвела " + inDAYperf + " штук бутылок;");
+        System.out.println(".. три дня (трое суток) машина произвела " + inThreeDaysPerf  + " штук бутылок;");
+        System.out.println(".. месяц машина произвела " + inMonthPerf + " штук бутылок.\n");
 
         // task 5
-        var frog = 3.5;
-        System.out.println("");
-        System.out.println("Task 5 result:");
-        System.out.println("    var frog is " + frog + ";");
-        var tt = frog * 10;
-        System.out.println(tt + ";");
-        tt = tt / 3.5;
-        System.out.println(tt + ";");
-        System.out.println(tt + 4 + ".");
+        System.out.println("\nTask 5 result:");
+        byte paintBuckets = 120;
+        byte perRoomWhitePaint = 2;
+        byte perRoomBrownPaint = 4;
+        int roomCount = paintBuckets / (perRoomWhitePaint + perRoomBrownPaint);
+        int purchasedWhite = roomCount * perRoomWhitePaint;
+        int purchasedBrown = roomCount * perRoomBrownPaint;
+        System.out.println("В школе, где " + roomCount + " классов, нужно " + purchasedWhite + " банок белой кураски,");
+        System.out.println("и " + purchasedBrown + " банок коричневой краски.\n");
 
         // task 6
-        var f_1 = 78.2;
-        var f_2 = 82.7;
-        var f_sumWeight = f_1 + f_2;
-        var f_diffWeight = abs(f_1 - f_2);
-        System.out.println("");
-        System.out.println("Task 6 result:");
-        System.out.println("summary weight: " + f_sumWeight + " Kg;");
-        System.out.println("weight difference: " + f_diffWeight + " Kg.");
+        System.out.println("\nTask 6 result:");
+        int bananasCount = 5;
+        int bananaWeight = 80;
+        int milkVolume = 200; //ml
+        int milkOneHundredMilitersWeight = 105;
+        int iceCreamCount = 2;
+        int iceCreamWeight = 100;
+        int eggsCount = 4;
+        int eggWeight = 70;
+        int totalWeight = (bananasCount * bananaWeight) + (2 * milkOneHundredMilitersWeight) +
+                (iceCreamCount * iceCreamWeight) + (eggsCount * eggWeight);
+        float totalWeightKg = totalWeight / 1000f;
+
+//       System.out.println("Total weight is " + totalWeight + " g.\n");
+        System.out.println("Total weight is " + totalWeightKg + " (Kg).\n");
 
         // task 7
-        System.out.println("");
-        System.out.println("Task 7 result:");
-        double n_diffWeight = 0;
-        double o_diffWeight = 0;
+        System.out.println("\nTask 7 result:");
+        int liteWeight = 7;
+        int liteWeightGram = liteWeight * 1000;
+        float daysLiteBy250gr = liteWeightGram / 250f;
+        float daysLiteBy500gr = liteWeightGram / 500f;
 
-        if (f_1 >= f_2) {
-            n_diffWeight = f_1 - f_2;
-            o_diffWeight = f_1 % f_2;
-        } else
-            {
-            n_diffWeight = f_2 - f_1;
-            o_diffWeight = f_2 % f_1;
-        }
-        System.out.println("difference: " + n_diffWeight + " Kg;");
-        System.out.println("difference %: " + o_diffWeight + " Kg;");
-
-        // task 8
-        System.out.println("");
-        System.out.println("Task 8 result:");
-        int hours_ = 640;
-        int workday = 8;
-        int staff = 0;
-        staff = hours_ / workday;
-        System.out.println("The Company has : " + staff + " workers.");
-
-        int hours_new = 0;
-        int staff_new = 0;
-        staff_new = staff + 94;
-        hours_new = staff_new * 8;
-        System.out.print("Если в компании работает : " + staff_new + " человек, то всего ");
-        System.out.println(hours_new + " часов работы может быть поделено между сотрудниками.");
-
+        System.out.println("Спортсмен похудеет на 7 кг. по 250 гр. в день за " + daysLiteBy250gr + " дней,");
+        System.out.println("\t либо за " + daysLiteBy500gr + " дней, если будет худеть по 500 гр. в день.\n");
 
 
 
     }
 }
+
