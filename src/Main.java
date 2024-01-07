@@ -27,23 +27,25 @@ public class Main {
         System.out.println(" at <link>.\n");
     }
 
-    public static int daysToDelivery(int distance) {
+    public static int[] daysToDelivery(int distance) {
         int[] delDistTreshold = {0, 20, 60, 100};
-        int delDays = 0;
+        int res[] = new int[2]; // Результат метода возвр. в виде вектора длиной 2 значения -
+            // - нулевой элемент статус операции, первое - вычисленный результат.
         int i1 = delDistTreshold.length - 1;
         int k1 = 0;
         do {
             if (distance >= delDistTreshold[k1] && distance < delDistTreshold[k1 + 1]) {
-                delDays = k1 + 1;
-                i1 = -2;
+                res[1] = k1 + 1;
+                res[0] = 0;
                 break;
             } else if (i1 == 1 && distance > delDistTreshold[k1 + 1]) {
-                i1 = -1;
+                res[0] = -1;
+                res[1] = delDistTreshold[k1 + 1];
                 break;
             }
             i1--; k1++;
         } while (i1 > 0);
-        return i1;
+        return res;
     }
     public static void main(String[] args) {
         System.out.println("--hw11-methods--");
@@ -74,19 +76,21 @@ public class Main {
         // task 3
         System.out.println("\nTask 3 result:");
         int[] delDist = {15, 20, 95, 200};
-        int res = 0;
-
-        switch (i1) {
-            case -2:
-                System.out.println("\tВремя доставки составит, сут.: " + delDays + ".\n");
-                break;
-            case -1:
-                System.out.println("\tДоставка не осуществляется для расстояний, превышающие ");
-                System.out.println(delDistTreshold[k1 + 1] + " км.");
-                break;
+        int res1[] = new int[2];
+        int k = delDist.length;
+        for (int i = 0; i < k; i++) {
+            System.out.println("\tРасстояние до места доставки \u2013 " + delDist[i] + " км.");
+            res1 = daysToDelivery(delDist[i]);
+            switch (res1[0]) {
+                case 0:
+                    System.out.println("\tВремя доставки составит, сут.: " + res1[1] + ".\n");
+                    break;
+                case -1:
+                    System.out.println("\tДоставка не осуществляется для расстояний, превышающие ");
+                    System.out.println(res1[1] + " км.");
+                    break;
+            }
         }
-        System.out.println("\tРасстояние до места доставки \u2013 " + distance + " км.");
-        daysToDelivery(100);
 
     }
 }
