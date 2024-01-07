@@ -6,8 +6,14 @@ public class Main {
 
         // task 1
         System.out.println("\nTask 1 result:");
-        public static void main(int aYear args) {
-
+        public static void isLeap(int aYear) {
+            if (aYear > 1584) {
+                if (((aYear % 400 == 0) || (aYear % 4 == 0)) && (aYear % 100 != 0)) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
         }
     }
 }
