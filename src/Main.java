@@ -12,20 +12,30 @@ public class Main {
         }
         return ret;
     }
+    public static int isModern(boolean osAndroid, int relYear) {
+
+    }
     public static void main(String[] args) {
         System.out.println("--hw11-methods--");
 
         // task 1
         System.out.println("\nTask 1 result:");
-        int res = isLeap(1000)
-        switch (res) {
-            case: 0:
-                System.out.println("не високосный.");
-            case: 1:
-                System.out.println("високосный.");
-            case: -1:
-                System.out.println("ошибка диапазона (до 1584 года не определено.");
+        int[] yearsSet = {1582, 1584, 1981, 2020, 2021, 2024};
+        int res = 0;
+        for (int i = 0; i < yearsSet.length; i++) {
+            res = isLeap(yearsSet[i]);
+            System.out.print("Год " + yearsSet[i] + " \u2014 ");
+            switch (res) {
+                case 0:
+                    System.out.println("не високосный.");
+                    break;
+                case 1:
+                    System.out.println("високосный.");
+                    break;
+                case -1:
+                    System.out.println("ошибка диапазона (до 1585 года не определено).");
+                    break;
+            }
         }
-        System.out.println();
     }
 }
