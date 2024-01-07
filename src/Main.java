@@ -6,9 +6,9 @@ public class Main {
         if (aYear > 1584) {
             if (((aYear % 400 == 0) || (aYear % 4 == 0)) && (aYear % 100 != 0)) {
                 ret = 1;
-            } else {
-                ret = -1;
-            }
+            } else ret = 0;
+        } else {
+            ret = -1;
         }
         return ret;
     }
@@ -17,6 +17,15 @@ public class Main {
 
         // task 1
         System.out.println("\nTask 1 result:");
-        System.out.println(isLeap(2021));
+        int res = isLeap(1000)
+        switch (res) {
+            case: 0:
+                System.out.println("не високосный.");
+            case: 1:
+                System.out.println("високосный.");
+            case: -1:
+                System.out.println("ошибка диапазона (до 1584 года не определено.");
+        }
+        System.out.println();
     }
 }
