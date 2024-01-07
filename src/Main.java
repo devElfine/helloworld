@@ -73,6 +73,7 @@ public class Main {
 
         // task 3
         System.out.println("\nTask 3 result:");
+        int[] delDist = {15, 20, 95, 200};
         int res = 0;
 
         switch (i1) {
