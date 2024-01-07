@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -12,32 +14,19 @@ public class Main {
         }
         return ret;
     }
-    public static int isModern(boolean osAndroid, int relYear) {
-        clientOS = false;
-        int clientDeviceYear = 2013;
-        int clientModernSupportYear = 2015;
-        quit = 6;
-
-        while (quit > 0) {
-            if (quit % 2 == 0) { // Проверкана на чётность
-                clientDeviceYear++;
-                System.out.println("Client's device was produced in " + clientDeviceYear + " year.\n");
-            }
-            System.out.print("Please, go download and setup our ");
-
-            if (clientDeviceYear < clientModernSupportYear) System.out.println("LITE version of app");
+    public static void isModern(boolean osAndroid, int relYear) {
+        int currentYear = LocalDate.now().getYear();
+        System.out.println("Client's device was produced in " + relYear + " year.\n");
+        System.out.print("Please, go download and setup our ");
+        if (relYear < currentYear) System.out.println("LITE version of app");
             else System.out.print("MODERN version of app ");
 
-            System.out.print("for ");
-            if (clientOS) System.out.print("iOS");
-            else System.out.print("Android");
-            System.out.println(" at <link>.\n");
-
-            clientOS = !clientOS;
-            quit--;
-        }
-
+        System.out.print("for ");
+        if (osAndroid) System.out.print("Android");
+            else System.out.print("iOS");
+        System.out.println(" at <link>.\n");
     }
+
     public static void main(String[] args) {
         System.out.println("--hw11-methods--");
 
@@ -60,5 +49,12 @@ public class Main {
                     break;
             }
         }
+        // task 2
+        System.out.println("\nTask 2 result:");
+        isModern(true, 2015);
+
+        // task 3
+        System.out.println("\nTask 3 result:");
+
     }
 }
