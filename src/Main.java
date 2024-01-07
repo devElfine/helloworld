@@ -73,6 +73,7 @@ public class Main {
 
         // task 3
         System.out.println("\nTask 3 result:");
+        int res = 0;
 
         switch (i1) {
             case -2:
