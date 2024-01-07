@@ -13,6 +13,29 @@ public class Main {
         return ret;
     }
     public static int isModern(boolean osAndroid, int relYear) {
+        clientOS = false;
+        int clientDeviceYear = 2013;
+        int clientModernSupportYear = 2015;
+        quit = 6;
+
+        while (quit > 0) {
+            if (quit % 2 == 0) { // Проверкана на чётность
+                clientDeviceYear++;
+                System.out.println("Client's device was produced in " + clientDeviceYear + " year.\n");
+            }
+            System.out.print("Please, go download and setup our ");
+
+            if (clientDeviceYear < clientModernSupportYear) System.out.println("LITE version of app");
+            else System.out.print("MODERN version of app ");
+
+            System.out.print("for ");
+            if (clientOS) System.out.print("iOS");
+            else System.out.print("Android");
+            System.out.println(" at <link>.\n");
+
+            clientOS = !clientOS;
+            quit--;
+        }
 
     }
     public static void main(String[] args) {
