@@ -6,6 +6,7 @@ public class Main {
 
         // task 1
         System.out.println("\nTask 1 result:");
+        public static void main(int aYear args) {
 
         }
     }
