@@ -13,6 +13,18 @@ class Author {
     public String getAuthorSurName() {
         return surName;
     }
+//    @Override:
+    public String toString() {
+        return firstName + " " + surName;
+    }
+    public boolean equals(Author sample) {
+        return (this.getAuthorName().equalsIgnoreCase(sample.getAuthorName()) &&
+                this.getAuthorSurName().equalsIgnoreCase(sample.getAuthorSurName()));
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(firstName, surName);
+    }
 }
 class Book {
     private String title;
@@ -35,7 +47,19 @@ class Book {
     public void setPubYear(int pubYear) {
         this.pubYear = pubYear;
     }
-
+//    @Override:
+    public String toString() {
+        return "Title [" + this.getTitle() + "] Author [" + this.getAuthor().toString() + "] " + " Year [" +
+                this.getPubYear() + "]";
+    }
+    public boolean equals(Book sample) {
+        return (this.getTitle().equalsIgnoreCase(sample.getTitle()) &&
+                this.getPubYear() == this.getPubYear());
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(title, pubYear);
+    }
 }
 class Lib {
     static Author[] authors = null;
@@ -43,9 +67,7 @@ class Lib {
     private static void printCatalogue() {
         int k = books.length;
         for (int i = 0; i < k; i++) {
-            System.out.println("Title [" + books[i].getTitle() + "] Author [" + books[i].getAuthor().getAuthorName() +
-                    " " + books[i].getAuthor().getAuthorSurName() + "] " + " Year [" +
-                    books[i].getPubYear() + "]");
+            System.out.println(books[i].toString());
         }
     }
     public Lib() {
