@@ -2,8 +2,9 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        //--hw#-CAP--
-        //Task #
+        //hw13-methods-by-objects
+        //Task 1
+
         }
     }
 }
