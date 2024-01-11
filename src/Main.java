@@ -3,8 +3,8 @@
 //import Bookyw, Javaxsw;
 public class Main {
     public static void main(String[] args) {
-        //--hw12-objects-and-classes--
-        //Task 1
+//        hw13-methods-by-objects ready
+//        Task 1
         Lib Lib = new Lib();
         Lib.main();
     }
